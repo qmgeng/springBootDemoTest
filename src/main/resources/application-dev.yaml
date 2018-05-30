@@ -1,0 +1,39 @@
+server:
+  port: 8080
+  servlet:
+    path: '/dev'
+
+demo:
+  testValue: 'test11111'
+
+spring:
+    datasource:
+        type: com.alibaba.druid.pool.DruidDataSource
+        driverClassName: com.mysql.jdbc.Driver
+        driver-class-name: com.mysql.jdbc.Driver
+        platform: mysql
+        url: jdbc:mysql://11.162.208.86:3306/cms_entry?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
+        username: cms_entry
+        password: cms_entry
+        initialSize: 5
+        minIdle: 5
+        maxActive: 20
+        maxWait: 60000
+        timeBetweenEvictionRunsMillis: 60000
+        minEvictableIdleTimeMillis: 300000
+        validationQuery: SELECT1FROMDUAL
+        testWhileIdle: true
+        testOnBorrow: false
+        testOnReturn: false
+        filters: stat,wall,log4j
+        logSlowSql: true
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.example.demo.bean
+
+
+
+
+
+
